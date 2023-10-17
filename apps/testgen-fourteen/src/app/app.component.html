@@ -1,5 +1,21 @@
+<testgen-fourteen-global-header
+  (sidenavtoggle)="sideNavToggle()"
+></testgen-fourteen-global-header>
 <div class="wrapper">
   <div class="container">
-    
+    <testgen-fourteen-global-sidenav [opened]="sideNavOpen">
+      <mat-nav-list sidenav="">
+        <a
+          mat-list-item=""
+          routerlinkactive="active-link"
+          routerlink="/"
+          (click)="sideNavToggle()"
+        >
+          <span class="App__sidenav-text">Home</span>
+        </a>
+      </mat-nav-list>
+      <router-outlet></router-outlet>
+    </testgen-fourteen-global-sidenav>
   </div>
 </div>
+<testgen-fourteen-global-footer> </testgen-fourteen-global-footer>
